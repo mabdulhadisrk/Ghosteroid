@@ -5,13 +5,18 @@
     font-weight:normal;
     font-style:normal;
 }
+
 body{
     margin:0;
     height:100vh;
     overflow:hidden;
     position:relative;
     user-select:none;
+    background-color: black;
 }
+
+/* the background image layer */
+
 body:before{
     content:"";
     position:absolute;
@@ -25,16 +30,10 @@ body:before{
     left:0;
     top:0;
     z-index: -1;
-    animation: infiniteBackgroundZoom 5s ease-in-out infinite alternate;
+    transform-origin: 50% 53%;
+    transition: transform 2s ease-in-out, filter 2s ease;
 }
-@keyframes infiniteBackgroundZoom{
-0%{
-    transform:scale(1);
-}
-100%{
-    transform:scale(1.2);
-}
-}
+
 .topleft{
     position:absolute;
     color: rgba(228, 223, 223, 0.64);
@@ -45,6 +44,7 @@ body:before{
     letter-spacing:8px;
     left:20px;
 }
+
 .topleftdown{
     position:absolute;
     color:rgba(255, 0, 0, 0.521);
@@ -54,13 +54,18 @@ body:before{
     letter-spacing:8px;
     left:20px;
 }
+
 .GhostEroid-Main{
+    position: fixed;
     color:white;
     text-align:center;
     font-family:'Morvanh';
     font-size:7rem;
     letter-spacing:20px;
+    top:90px;
+    left:40%;
 }
+
 .GE-mainS{
     position:center;
     color: rgba(255,0,0,0.521);
@@ -72,4 +77,73 @@ body:before{
     font-size:7rem;
     letter-spacing: 20px;
     
+}
+
+/* the main hitbox*/
+
+.mouth{
+    position:absolute;
+    width:190px;
+    height:125px;
+    left:47.5%;
+    bottom:-58px;
+    transform: translate(-50%,-50%);
+    z-index:999;
+}
+
+body.realm-active::before{
+    transform: scale(8.5);
+    filter: brightness(0);
+}
+
+ /* vanish everything once get into the realm */
+ body.realm-active .topleft, body.realm-active .topleftdown,
+ body.realm-active .GE-mainS, body.realm-active .GhostEroid-Main {
+        opacity:0;
+        visibility:hidden;
+    }
+
+    /* 2nd realm layout */
+
+ .Srealm{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1000;
+    width:100%;
+    height:100%;
+    align-items:center;
+    display:flex;
+    justify-content: center;
+    opacity:0;
+    visibility:hidden;
+    transition: opacity 1.5s ease 1s;
+}
+
+body.realm-active .Srealm{
+        visibility:visible;
+        opacity:1;
+}
+
+.goback1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:1.5rem;
+    cursor:pointer;
+    background:transparent;
+    border:none;
+    color:rgb(102, 20, 20);
+    padding: 1px 20px;
+    position:absolute;
+    right:20px;
+    bottom:40px;
+
+}
+
+.goback1:hover{
+    border-color:white;
+    color:white;
+}
+
+.topleft, .topleftdown, .GhostEroid-Main {
+    transition: opacity 1s ease, visibility 1s ease;
 }

@@ -5,9 +5,71 @@
     font-weight:normal;
     font-style:normal;
 }
-@font-face{
+body{
+    margin:0;
+    height:100vh;
+    overflow:hidden;
+    position:relative;
+    user-select:none;
+}
+body:before{
+    content:"";
+    position:absolute;
+    background-color:black;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.pinimg.com/1200x/19/b9/4b/19b94b637c02688defb4559b2482e878.jpg);
+    background-position:center 50%;
+    background-size:cover;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
+    left:0;
+    top:0;
+    z-index: -1;
+    animation: infiniteBackgroundZoom 5s ease-in-out infinite alternate;
+}
+@keyframes infiniteBackgroundZoom{
+0%{
+    transform:scale(1);
+}
+100%{
+    transform:scale(1.2);
+}
+}
+.topleft{
+    position:absolute;
+    color: rgba(228, 223, 223, 0.64);
+    font-family: 'Morvanh';
+    font-size: 1.8rem;
+    width:0px;
+    top:-10px;
+    letter-spacing:8px;
+    left:20px;
+}
+.topleftdown{
+    position:absolute;
+    color:rgba(255, 0, 0, 0.521);
     font-family:'Morvanh';
-    src: url('./fonts/Morvanh-Italic.otf') format('opentype');
-    font-weight:normal;
-    font-style:italic;
+    font-size:1rem;
+    top:25px;
+    letter-spacing:8px;
+    left:20px;
+}
+.GhostEroid-Main{
+    color:white;
+    text-align:center;
+    font-family:'Morvanh';
+    font-size:7rem;
+    letter-spacing:20px;
+}
+.GE-mainS{
+    position:center;
+    color: rgba(255,0,0,0.521);
+    font-family:'Morvanh';
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+    align-items:center;
+    font-size:7rem;
+    letter-spacing: 20px;
+    
 }

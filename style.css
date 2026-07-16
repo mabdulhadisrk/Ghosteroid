@@ -6,6 +6,7 @@
     font-style:normal;
 }
 
+
 body{
     margin:0;
     height:100vh;
@@ -33,6 +34,8 @@ body:before{
     transform-origin: 50% 53%;
     transition: transform 2s ease-in-out, filter 2s ease;
 }
+
+ /* GhosEroid text */
 
 .topleft{
     position:absolute;
@@ -160,4 +163,12 @@ body.realm-active .mouth{
 
 .topleft, .topleftdown, .GhostEroid-Main {
     transition: opacity 1s ease, visibility 1s ease;
+}
+
+.WelG2{
+    position:absolute;
+    top:100px;
+    color:rgb(23, 11, 74);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing:1px;
 }

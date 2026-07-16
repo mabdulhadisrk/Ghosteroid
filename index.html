@@ -16,6 +16,40 @@
     <h1 class ="GhostEroid-Main">Ghost<span class = "GE-mainS">Eroid</span></h1>
 <!--2nd realm-->
     <div class = "Srealm">
+        <!--the game name-->
+        <h1 class = "WelG2">The Curse Of The Wells</h1>
+
+        <!--Stage 1 - Play the tape-->
+
+        <div id ="stage1" class = "Game1-stage ActiveStage">
+            <p class = "hint"> The Television is waiting. Click the dusty VHS tape to insert into the player and unlock the transmission. </p>
+                <div class="VHS-tape" onclick ="InsertTape()">VHS TAPE</div>
+        </div>
+
+        <!--Stage 2 - Answer the phone-->
+
+        <div id = "stage2" class = "Game1-stage">
+            <p class = "hint">The tape ends. A nearby phone begins to ring out. Answer the line before the statics cuts you off! </p>
+                <div class = "phone-button" onclick = "answerPhone()">Answer phone</div>
+        </div>
+
+        <!--Stage 3 - struggle clickssss -->
+
+        <div id = "stage3" class = "Game1-stage">
+            <p class = "hint">SHE'S CRAWLING THROUGH THE SCREEN! Push her back into the abyss before she reaches you!</p>
+                <h3 id="ClickCounter"> REMAINING: 15</h3>
+                <button class = "Game-button-Struggle" onclick = "struggleClick()">PUSH BACK!</button>
+        </div>
+
+        <!--Stage 4 - Escape the room-->
+
+        <div id = "stage4" class = "Game1-stage">
+            <h3 style="color:#00ff00; letter-spacing:5px;">The Transmission Broke, She Has RETREATED</h3>
+                <button class = "goback1">Go back to the realm 1</button>
+        </div>
+
+        <!-- going back to main page-->
+
         <button class="goback1">Go Back to realm 1</button>
     </div>
     <script src="script.js"></script>

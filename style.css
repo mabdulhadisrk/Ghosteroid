@@ -1,0 +1,13 @@
+@font-face{
+
+    font-family:'Morvanh';
+    src: url('./fonts/Morvanh-Regular.otf') format('opentype');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face{
+    font-family:'Morvanh';
+    src: url('./fonts/Morvanh-Italic.otf') format('opentype');
+    font-weight:normal;
+    font-style:italic;
+}

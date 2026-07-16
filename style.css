@@ -105,8 +105,18 @@ body.realm-active::before{
 
     /* 2nd realm layout */
 
+.bodyRealm2{
+    background-image:url(https://i.pinimg.com/1200x/10/ac/94/10ac94e8376370c87731c6b876a9a67a.jpg);
+    }
+
  .Srealm{
-    position:absolute;
+    position:fixed;
+    background:black;
+    background-image:url(https://i.pinimg.com/1200x/10/ac/94/10ac94e8376370c87731c6b876a9a67a.jpg);
+    background-repeat:none;
+    background-size:cover;
+    background-position:center 30%;
+    background-attachment: fixed;
     top:0;
     left:0;
     z-index:1000;
@@ -125,6 +135,9 @@ body.realm-active .Srealm{
         opacity:1;
 }
 
+body.realm-active .mouth{
+    display:none;
+}
 .goback1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size:1.5rem;
@@ -134,8 +147,9 @@ body.realm-active .Srealm{
     color:rgb(102, 20, 20);
     padding: 1px 20px;
     position:absolute;
-    right:20px;
-    bottom:40px;
+    right:-10px;
+    bottom:20px;
+    text-shadow:3px 3px 20px rgb(232, 225, 225);
 
 }
 

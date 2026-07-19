@@ -81,6 +81,14 @@ body:before{
     letter-spacing: 20px;
     
 }
+/* buttons */
+
+.playgameButton, .VHS-tape, .phone-button, .Game-button-struggle {
+    cursor:pointer;
+    user-select:none;
+    -webkit-user-select: none;
+
+}
 
 /* the main hitbox*/
 
@@ -164,7 +172,7 @@ body.realm-active .Srealm{
 
 body.abyss-1::before {
     transform: scale(1.1);
-    filter: brightness(0.4) constrast(1.2);
+    filter: brightness(0.4) contrast(1.2);
 }
 
 /* dark ringing hallway */
@@ -232,7 +240,7 @@ body.abyss-4::before{
     font-size:3rem;
     margin-bottom:60px;
     color:rgb(23, 11, 74);
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:Impact, 'Arial Narrow Bold', sans-serif;
     letter-spacing:1px;
 }
 .hint{
@@ -240,4 +248,10 @@ body.abyss-4::before{
     line-height:1.6;
     font-family:sans-serif;
     max-width:500px;
+}
+.Game-button-Struggle{
+    transition: 0.2s all ease-in-out;
+}
+.Game-button-Struggle:hover{
+    transform:scale(1.1);
 }

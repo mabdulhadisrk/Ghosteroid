@@ -3,7 +3,7 @@
 <head>
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-    <meta http-equiv = "X-UA-Compatible" content ="ie-edge">
+    <meta http-equiv = "X-UA-Compatible" content ="ie=edge">
     <title>GhostEroid</title>
     <link rel = "stylesheet" href = "style.css">
 </head>
@@ -40,19 +40,16 @@
         <div id = "stage3" class = "Game1-stage">
             <p class = "hint">SHE'S CRAWLING THROUGH THE SCREEN! Push her back into the abyss before she reaches you!</p>
                 <h3 id="ClickCounter"> REMAINING: 15</h3>
-                <button class = "Game-button-Struggle" onclick = "struggleClick()">PUSH BACK!</button>
+                <button class = "Game-button-Struggle" style = "background:transparent; border:2px solid black; font-size:2rem; color:red; font-weight:bold; cursor:pointer;" onclick = "struggleClick()">PUSH BACK!</button>
         </div>
 
         <!--Stage 4 - Escape the room-->
 
         <div id = "stage4" class = "Game1-stage">
-            <h3 style="color:#00ff00; letter-spacing:5px;">The Transmission Broke, She Has RETREATED</h3>
+            <h3 style="color:#ff9100; letter-spacing:5px; font-size:2rem; font-weight:bold;">The Transmission Broke, She Has RETREATED</h3>
                 <button class = "goback1">Go back to the realm 1</button>
         </div>
 
-        <!-- going back to main page-->
-
-        <button class="goback1">Go Back to realm 1</button>
     </div>
     <script src="script.js"></script>
 </body>

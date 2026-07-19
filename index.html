@@ -17,11 +17,13 @@
 <!--2nd realm-->
     <div class = "Srealm">
         <!--the game name-->
-        <h1 class = "WelG2">The Curse Of The Wells</h1>
-
+        <div id = "stage0" class = "Game1-stage ActiveStage">
+            <h1 class = "WelG2">The Curse Of The Wells</h1>
+            <button type = "button" class = "playgameButton" onclick = "startGameSequence()">Play Game 1</button>
+        </div>
         <!--Stage 1 - Play the tape-->
 
-        <div id ="stage1" class = "Game1-stage ActiveStage">
+        <div id ="stage1" class = "Game1-stage">
             <p class = "hint"> The Television is waiting. Click the dusty VHS tape to insert into the player and unlock the transmission. </p>
                 <div class="VHS-tape" onclick ="InsertTape()">VHS TAPE</div>
         </div>

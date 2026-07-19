@@ -95,8 +95,8 @@ body:before{
 }
 
 body.realm-active::before{
-    transform: scale(8.5);
-    filter: brightness(0);
+    transform: scale(1);
+    filter: brightness(0.6);
 }
 
  /* vanish everything once get into the realm */
@@ -114,32 +114,94 @@ body.realm-active::before{
 
  .Srealm{
     position:fixed;
+    background:transparent;
+    top:0;
+    left:0;
+    z-index:1000;
+    width:100vw;
+    height:100vh;
+    align-items:center;
+    display:flex;
+    justify-content: center;
+    /* hides the interface completely at the startup */
+    opacity:0;
+    visibility:hidden;
+    transition: opacity 1.5s ease 1s;
+}
+/* turning off mouth box layer */
+body.realm-active .mouth{
+    display:none;
+}
+/* hides all the stages initially */
+.Game1-stage{
+    display:none;
+    flex-direction:column;
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    width:100%;
+    max-width:600px;
+    padding:20px;
+}
+/* keep the first stage showing */
+.Game1-stage.ActiveStage{
+    display:flex;
+}
+
+/* the 4 stages background */
+
+body.realm-active .Srealm{
     background:black;
     background-image:url(https://i.pinimg.com/1200x/10/ac/94/10ac94e8376370c87731c6b876a9a67a.jpg);
     background-repeat:none;
     background-size:cover;
     background-position:center 30%;
     background-attachment: fixed;
-    top:0;
-    left:0;
-    z-index:1000;
-    width:100%;
-    height:100%;
-    align-items:center;
-    display:flex;
-    justify-content: center;
-    opacity:0;
-    visibility:hidden;
-    transition: opacity 1.5s ease 1s;
+    visibility:visible;
+    opacity:1;
 }
 
-body.realm-active .Srealm{
-        visibility:visible;
-        opacity:1;
+body.abyss-1::before {
+    transform: scale(1.1);
+    filter: brightness(0.4) constrast(1.2);
 }
 
-body.realm-active .mouth{
-    display:none;
+/* dark ringing hallway */
+
+body.abyss-2::before{
+    transform: scale(1.25) rotate(-1deg);
+    filter: brightness(0.2) sepia(0.8) hue-rotate(320deg);
+}
+/* inside the pit of well */
+body.abyss-3::before{
+    transform: scale(3.5);
+    filter: brightness(0.5) contrast(2);
+    animation: screenVibrate 0.1s infinite alternate;
+}
+/* dark screen clearance oblivion */
+body.abyss-4::before{
+    transform: scale(1);
+    filter: brightness(0);
+}
+
+@keyframes screenVibrate{
+    0%{transform: scale(3.5) translate(1px,2px);}
+    100%{transform:scale(3.5) translate(-2px, -1px);}
+}
+
+.play-game-btn, .VHS-tape, .phone-button, .Game-button-struggle {
+    color:rgb(170, 25, 25);
+    cursor:pointer;
+    font-size: 1.5rem;
+    padding: 12px 30px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+.play-game-btn:hover, .VHS-tape:hover, .phone-button:hover, .Game-button-struggle:hover{
+    color:white;
+    background: rgb(135, 12, 12);
+    box-shadow: 0 0 15px rgb(171, 17, 17)
 }
 .goback1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -167,8 +229,15 @@ body.realm-active .mouth{
 
 .WelG2{
     position:absolute;
-    top:100px;
+    font-size:3rem;
+    margin-bottom:60px;
     color:rgb(23, 11, 74);
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing:1px;
+}
+.hint{
+    font-size:1.8rem;
+    line-height:1.6;
+    font-family:sans-serif;
+    max-width:500px;
 }

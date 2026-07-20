@@ -235,6 +235,14 @@ body.abyss-4::before{
     transition: opacity 1s ease, visibility 1s ease;
 }
 
+.hiy {
+    max-width:230px;
+    position:absolute;
+    bottom:50%;
+    right:30px;
+    color:white;
+    font-size:1rem;
+}
 .WelG2{
     position:absolute;
     font-size:3rem;
